@@ -2,7 +2,7 @@ package com.th.academy.edu.mapper;
 
 import com.th.academy.edu.pojo.Chapter;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.apache.ibatis.annotations.Mapper;
+
 
 /**
  * <p>

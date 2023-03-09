@@ -29,7 +29,7 @@ spring:
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-  mapper-locations: classpath:com/th/academy/edu/mapper/*.xml
+  mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.th.academy.edu.pojo
   global-config:
     db-config:
