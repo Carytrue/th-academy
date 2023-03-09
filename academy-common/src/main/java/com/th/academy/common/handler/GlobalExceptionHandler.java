@@ -1,6 +1,7 @@
 package com.th.academy.common.handler;
 
 import com.th.academy.common.exception.GlobalException;
+import com.th.academy.common.utils.ExceptionUtil;
 import com.th.academy.common.utils.ResponseResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -18,7 +19,7 @@ public class GlobalExceptionHandler {
     //自定义异常
     @ExceptionHandler(GlobalException.class)
     public ResponseResult error(GlobalException e) {
-        log.error(e.getMsg());
+        log.error(ExceptionUtil.getMessage(e));
         e.printStackTrace();
         return ResponseResult.error().code(e.getCode()).message(e.getMsg());
     }
@@ -29,5 +30,6 @@ public class GlobalExceptionHandler {
         e.printStackTrace();
         return ResponseResult.error().message("执行了全局异常处理..");
     }
+
 }
 

@@ -20,4 +20,12 @@ public class GlobalException extends RuntimeException {
 
     //异常信息
     private String msg;
+
+    @Override
+    public String toString() {
+        return "GlobalException{" +
+                "message=" + this.getMessage() +
+                ", code=" + code +
+                '}';
+    }
 }
